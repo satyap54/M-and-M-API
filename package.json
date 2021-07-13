@@ -1,0 +1,32 @@
+{
+  "name": "m-and-m-api",
+  "version": "1.0.0",
+  "description": "An API to fetch Eminem quotes and music recommendations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.6.0",
+    "express": "^4.16.4",
+    "mongodb": "^3.0.0",
+    "mongoose": "^5.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/satyap54/M-and-M-API.git"
+  },
+  "author": "Satyabrat Panda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/satyap54/M-and-M-API/issues"
+  },
+  "homepage": "https://github.com/satyap54/M-and-M-API#readme",
+  "keywords": [
+    "node",
+    "express"
+  ]
+}
