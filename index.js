@@ -8,7 +8,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 const Song = require('./models/Song');
-const { create } = require('./models/Song');
 
 try{
   mongoose.connect(
