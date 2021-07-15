@@ -1,6 +1,7 @@
-const express = require('express')
-const router = express.Router()
-const getSongById = require('./controllers/song/getSongById')
+const express = require('express');
+const router = express.Router();
+const getSongById = require('./controllers/song/getSongById');
+
 
 // For Testing
 router.get("/", (req, res)=>{
@@ -12,6 +13,7 @@ router.get("/", (req, res)=>{
 })
 
 router.get("/ping", (req, res)=>{
+  console.log("func");
   res.send("Alive");
 })
 

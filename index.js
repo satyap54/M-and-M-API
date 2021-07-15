@@ -6,6 +6,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
+const rateLimiter = require('./middlewares/rateLimiter/slidingWindow');
 
 const Song = require('./models/Song');
 
@@ -22,9 +23,11 @@ try{
   console.error(error);
 }
 
+app.use(rateLimiter);
 app.use(routes);
 app.use(cors());
 app.use(bodyParser.json());
+
 
 app.post("/api/song/add", 
   (req, res)=>{
