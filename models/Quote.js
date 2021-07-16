@@ -4,6 +4,7 @@ const { Schema, model } = mongoose;
 const quoteSchema = new Schema(
   {
     content : { type : String, required : true },
+    song_id : { type : Number, required : true},
     song_url : { type : String, required : false },
     album : { type : String, required : false },
     year :	{ type : Number, required : false },

@@ -1,6 +1,12 @@
 const Song = require('../../models/Song');
 const redisClient = require("../redis/redis");
 
+/*
+  Returns details of a song
+  
+  @param {String} [req.param.song_id] song_id of the song whose 
+    details is to be fetched
+*/
 
 const getSongById = (req, res, next)=>{
   if(req.ipLimit){
