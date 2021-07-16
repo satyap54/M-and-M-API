@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const getSongById = require('./controllers/song/getSongById');
+const listSongs = require('./controllers/song/listSongs');
+const randomSong = require('./controllers/song/randomSong');
 
 
-// For Testing
+// Testing
 router.get("/", (req, res)=>{
   res.json(
     {
@@ -13,11 +15,20 @@ router.get("/", (req, res)=>{
 })
 
 router.get("/ping", (req, res)=>{
-  console.log("func");
   res.send("Alive");
 })
 
 // Song
-router.get("/api/song/:song_id", getSongById);
+router.get("/api/songs", listSongs);
+router.get("/api/songs/random", randomSong);
+router.get("/api/songs/:song_id", getSongById);
+
+// Quote
+// fetch a random quote
+// fetch a quote with id
+
+// Albums
+// list albums with ids - pagination
+// fetch details of an album - it's songs with ids
 
 module.exports = router;

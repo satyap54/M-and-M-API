@@ -4,6 +4,7 @@ const { Schema, model } = mongoose;
 const albumSchema = new Schema(
   {
     description : { type : String, required : true },
+    album_id : { type : Number, required : true, unique : true },
     album_url : { type : String, required : true },
     year : { type : Number, required : true },
     songs_list : { type : [String], required : true }
