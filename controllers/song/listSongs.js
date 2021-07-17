@@ -3,7 +3,8 @@ const redisClient = require('../redis/redis');
 
 /*
   Returns a paginated list of all songs, in no particular order
-
+  
+  @param {Object} query
   @param {number} [req.query.size = 10] Number of results per page
   @param {number} [req.query.page = 1] Page of results to return
 */
