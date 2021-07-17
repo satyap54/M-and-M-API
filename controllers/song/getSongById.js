@@ -21,7 +21,9 @@ const getSongById = (req, res, next)=>{
       return res.json(JSON.parse(data));
     }
     try{
-      const result = await Song.findById(song_id).exec();
+      const result = await Song.findOne({ song_id : song_id }, { _id : 0})
+        .select("name song_url song_id knox_hill_breakdown persona")
+        .exec();
       if(!result){
         res.status(404).json(
           {

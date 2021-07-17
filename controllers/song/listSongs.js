@@ -32,7 +32,10 @@ const listSongs = (req, res, next)=>{
         songArr = JSON.parse(data);
       }else{
         try{
-          songArr = await Song.find({}).skip(skip).limit(page);
+          songArr = await Song.find({})
+            .select("name song_url song_id knox_hill_breakdown persona")
+            .skip(skip)
+            .limit(page);
           redisClient.set(key, JSON.stringify(songArr));
         }catch(err){
           return console.error(err);

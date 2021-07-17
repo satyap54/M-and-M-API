@@ -3,6 +3,7 @@ const router = express.Router();
 const getSongById = require('./controllers/song/getSongById');
 const listSongs = require('./controllers/song/listSongs');
 const randomSong = require('./controllers/song/randomSong');
+const randomQuote = require('./controllers/quote/randomQuote');
 
 
 // Testing
@@ -22,9 +23,10 @@ router.get("/ping", (req, res)=>{
 router.get("/api/songs", listSongs);
 router.get("/api/songs/random", randomSong);
 router.get("/api/songs/:song_id", getSongById);
+// search a song by it's name
 
 // Quote
-// fetch a random quote
+router.get("/api/quotes/random", randomQuote);
 // fetch a quote with id
 
 // Albums

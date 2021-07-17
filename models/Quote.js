@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 const { Schema, model } = mongoose;
+const shortid = require('shortid');
 
 const quoteSchema = new Schema(
   {
+    _id : { type : String, default : shortid.generate },
     content : { type : String, required : true },
-    song_id : { type : Number, required : true},
-    song_url : { type : String, required : false },
-    album : { type : String, required : false },
-    year :	{ type : Number, required : false },
-    persona : { type : String, enum : ["B-Rabbit", "SlimShady", "Eminem", "Marshall Mathers"], required : false},
-    tags : { type : [String], required : true }
+    song_name : { type : String, required : false },
+    song_id : { type : Number, required : false }
   }, 
   { timestamps : true }
 )
