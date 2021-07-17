@@ -8,6 +8,8 @@ const dotenv = require('dotenv');
 dotenv.config();
 const rateLimiter = require('./middlewares/rateLimiter/slidingWindow');
 const Song = require('./models/Song');
+const Quote = require('./models/Quote');
+
 
 try{
   mongoose.connect(
@@ -27,7 +29,7 @@ app.use(routes);
 app.use(cors());
 app.use(bodyParser.json());
 
-
+/*
 app.post("/api/song/add", 
   (req, res)=>{
     Song.create(req.body, (err, data)=>{
@@ -37,6 +39,17 @@ app.post("/api/song/add",
     })   
   }
 )
+
+app.post("/api/quote/add", 
+  (req, res)=>{
+    Quote.create(req.body, (err, data)=>{
+      if(err)
+        return console.error(error)
+      res.json(data);
+    })
+  }
+)
+*/
 
 const listener = app.listen(process.env.PORT || 8000, ()=>{
   console.log(`App is listening on port ${listener.address().port}`);

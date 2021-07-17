@@ -15,7 +15,10 @@ const randomSong = async (req, res)=>{
       filter['persona'] = req.query.persona;
     }
 
-    const queryset = await Song.find(filter); 
+    const queryset = await Song
+      .find(filter, { _id : 0})
+      .select("name song_url song_id knox_hill_breakdown persona")
+      .exec(); 
     const lb = 0, ub = queryset.length;
     if(ub == 0){
       return res.status(404).send("Could not find any song");
