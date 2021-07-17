@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 const rateLimiter = require('./middlewares/rateLimiter/slidingWindow');
-
 const Song = require('./models/Song');
 
 try{
@@ -42,3 +41,5 @@ app.post("/api/song/add",
 const listener = app.listen(process.env.PORT || 8000, ()=>{
   console.log(`App is listening on port ${listener.address().port}`);
 })
+
+module.exports = app;
