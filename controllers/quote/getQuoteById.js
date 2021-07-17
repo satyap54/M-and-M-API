@@ -4,6 +4,8 @@ const redisClient = require('../redis/redis');
 
 /*
   Returns the quote with the particular id
+
+  @param {Object} params
   @param { String } [req.params.quote_id] quote_id of a particular quote
 */
 

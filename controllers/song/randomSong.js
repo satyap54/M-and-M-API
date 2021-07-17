@@ -5,6 +5,8 @@ const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
 /*
     Returns details of random song
+
+    @param {Object} query
     @param {String} [req.query.persona] fetch a random song with this persona
       enum = ["B-Rabbit", "SlimShady", "Eminem", "MarshallMathers"]
 */
