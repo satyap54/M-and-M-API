@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
 const rateLimiter = require('./middlewares/rateLimiter/slidingWindow');
-const Song = require('./models/Song');
-const Quote = require('./models/Quote');
+// const Song = require('./models/Song');
+// const Quote = require('./models/Quote');
 
 
 try{
