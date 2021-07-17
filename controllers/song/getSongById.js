@@ -4,7 +4,7 @@ const redisClient = require("../redis/redis");
 /*
   Returns details of a song
   
-  @param {String} [req.param.song_id] song_id of the song whose 
+  @param { Number } [req.param.song_id] song_id of the song whose 
     details is to be fetched
 */
 
@@ -15,6 +15,7 @@ const getSongById = (req, res, next)=>{
   const { song_id } = req.params;
   redisClient.get(`song${song_id}`, async (err, data)=>{
     if(err){
+      res.status(500);
       return console.error(err);
     }
     if(data){

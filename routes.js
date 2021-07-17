@@ -3,6 +3,7 @@ const router = express.Router();
 const getSongById = require('./controllers/song/getSongById');
 const listSongs = require('./controllers/song/listSongs');
 const randomSong = require('./controllers/song/randomSong');
+const getQuoteById = require('./controllers/quote/getQuoteById');
 const randomQuote = require('./controllers/quote/randomQuote');
 
 
@@ -27,7 +28,7 @@ router.get("/api/songs/:song_id", getSongById);
 
 // Quote
 router.get("/api/quotes/random", randomQuote);
-// fetch a quote with id
+router.get("/api/quotes/:quote_id", getQuoteById);
 
 // Albums
 // list albums with ids - pagination
