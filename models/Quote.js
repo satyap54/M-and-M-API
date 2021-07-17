@@ -8,7 +8,7 @@ const quoteSchema = new Schema(
     song_url : { type : String, required : false },
     album : { type : String, required : false },
     year :	{ type : Number, required : false },
-    persona : { type : String, enum : ["B-Rabbit", "Slim Shady", "Eminem", "Marshall Mathers"], required : false},
+    persona : { type : String, enum : ["B-Rabbit", "SlimShady", "Eminem", "Marshall Mathers"], required : false},
     tags : { type : [String], required : true }
   }, 
   { timestamps : true }

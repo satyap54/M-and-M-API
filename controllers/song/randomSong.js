@@ -1,4 +1,3 @@
-const redisClient = require('../redis/redis');
 const Song = require('../../models/Song');
 const personasArr = ["B-Rabbit", "SlimShady", "Eminem", "MarshallMathers"];
 
