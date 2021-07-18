@@ -48,8 +48,8 @@ M-And-M is a public api which I built to learn Node, Express. The database inclu
 	}
 	```
 
-	###  Songs
-	* ###  List Songs
+###  Songs
+* ###  List Songs
 	Paginated list of songs
 	```HTTP
 	GET /api/songs
