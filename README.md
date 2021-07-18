@@ -29,7 +29,7 @@ GET /api/quotes/random
 }
 ```
 
-####  Get A Particular Quote
+* ###  Get A Particular Quote
 Returns a particular quote with specified id 
 ```HTTP
 GET /api/quotes/:quote_id
@@ -49,7 +49,7 @@ GET /api/quotes/:quote_id
 ```
 
 ###  Songs
-####  List Songs
+* ###  List Songs
 Paginated list of songs
 ```HTTP
 GET /api/songs
@@ -81,7 +81,7 @@ GET /api/songs
 }
 ```
 
-####  Get Random Song
+* ###  Get Random Song
 Returns a random song from the database with a persona ( if specified )
 ```HTTP
 GET /api/songs/random
@@ -109,7 +109,7 @@ GET /api/songs/random
 }
 ```
 
-####  Get A Particular Song
+* ###  Get A Particular Song
 Returns a particular song with specified id 
 ```HTTP
 GET /api/songs/:song_id
