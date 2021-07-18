@@ -10,7 +10,7 @@ M-And-M is a public api which I built to learn Node, Express. The database inclu
 
 ##  API Reference
 ###  Quotes
-* ####  Get Random Quote
+* ### Get Random Quote
 Returns a random quote from the database
 ```HTTP
 GET /api/quotes/random
