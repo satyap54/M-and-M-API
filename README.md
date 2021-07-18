@@ -41,9 +41,9 @@ GET /api/quotes/:quote_id
 	// The quotation text
 	"content" :  content,
 	// Song from which this quotation is taken
-	"song_name" :  ,
+	"song_name" :  string,
 	// Id of song in db
-	"song" : "<song_id> <song_name>"
+	"song" : id
 
 }
 ```
