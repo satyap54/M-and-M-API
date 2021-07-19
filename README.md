@@ -17,6 +17,7 @@ M-And-M is a public api which I built to learn Node, Express. The database inclu
 | Name       | URL                 | Description                                      |
 | :--------- | :------------------ | :----------------------------------------------- |
 | Production | https://rpi4me.duckdns.org/eminem  | The primary API server (hosted on a Raspberry Pi) |
+The API is limited to approx. 60 requests per minute
 
 ##  API Reference
 ###  Quotes
