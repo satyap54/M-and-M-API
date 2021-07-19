@@ -133,4 +133,4 @@ M-And-M is a public api which I built to learn Node, Express. The database inclu
 
 ## Contribution
 
-All contributions are welcome! I will figure out a way to enable that.
+All contributions are welcome! I will figure out a way for others to add their favorite verses to the db.
