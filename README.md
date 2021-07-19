@@ -39,7 +39,7 @@ GET /api/quotes/random
 }
 ```
 
-####  Get A Particular Quote
+- ####  Get A Particular Quote
 Returns a particular quote with specified id 
 ```HTTP
 GET /api/quotes/:quote_id
