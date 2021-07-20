@@ -2,7 +2,7 @@
 
 M-And-M is a public api which I built to learn Node, Express. The database includes some of the best verses by Eminem and information about his songs.
 
--[Demo](#demo)
+- [Demo](#demo)
 - [Servers](#servers)
 - [API Reference](#api-reference)
   - [Get Random Quote](#get-random-quote)
