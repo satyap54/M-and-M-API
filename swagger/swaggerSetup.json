@@ -1,0 +1,150 @@
+{
+  "swagger": "2.0",
+
+  "info": {
+    "title": "M-And-M API",
+    "contact": {
+      "name": "Satyabrat Panda",
+      "Email": "satyabratp.m.2000@gmail.com"
+    },
+    "servers": ["http://localhost:8000/", "https://rpi4me.duckdns.org/eminem/"]
+  },
+
+  "apis": ["../routes.js"], 
+
+  "paths": {
+    "/ping": {
+      "get": {
+        "summary": "Ping the server",
+        "produces": "application/json",
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    }, 
+
+    "/api/songs": {
+      "get": {
+        "summary": "List songs in the db",
+        "produces": "application/json",
+        "parameters": [
+          {
+            "name": "page",
+            "description": "Page No.",
+            "type": "integer",
+            "in": "query",
+            "required": false
+          },
+          {
+            "name": "size",
+            "description": "Number of responses per page",
+            "type": "integer",
+            "in": "query",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    },
+
+    "/api/songs/random": {
+      "get": {
+        "summary": "Fetch a random song",
+        "produces": "application/json",
+        "parameters":[
+          {
+            "name": "persona",
+            "description": "Use this to filter a song to match your mood",
+            "type": "string",
+            "enum": ["SlimShady", "Eminem", "MarshallMathers", "B-Rabbit"],
+            "in": "query",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    },
+
+    "/api/songs/{song_id}": {
+      "get": {
+        "summary": "Fetch a song using it's ID",
+        "produces": "application/json",
+        "parameters":[
+          {
+            "name": "song_id",
+            "description": "ID of the song in db",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    },
+
+    "/api/quotes/random": {
+      "get": {
+        "summary": "Fetch a random quote/verse by Eminem",
+        "produces": "application/json",
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    },
+
+    "/api/quotes/{quote_id}": {
+      "get": {
+        "summary": "Fetch a quote using it's ID",
+        "produces": "application/json",
+        "parameters":[
+          {
+            "name": "quote",
+            "description": "ID of the quote in db",
+            "type": "integer",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description" : "OK"
+          },
+          "429": {
+            "description": "Requests limit exceeded"
+          }
+        }
+      }
+    }
+  }
+}
