@@ -1,21 +1,18 @@
 const express = require('express');
 const router = express.Router();
+const swaggerUi = require('swagger-ui-express');
 const getSongById = require('./controllers/song/getSongById');
 const listSongs = require('./controllers/song/listSongs');
 const randomSong = require('./controllers/song/randomSong');
 const getQuoteById = require('./controllers/quote/getQuoteById');
 const randomQuote = require('./controllers/quote/randomQuote');
+const swaggerSetup = require('./swagger/swaggerSetup.json');
 
+// Swagger UI
+router.use("/", swaggerUi.serve);
+router.get("/", swaggerUi.setup(swaggerSetup));
 
 // Testing
-router.get("/", (req, res)=>{
-  res.json(
-    {
-      "status" : "OK"
-    }
-  );
-})
-
 router.get("/ping", (req, res)=>{
   res.send("Alive");
 })
