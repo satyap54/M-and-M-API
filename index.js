@@ -30,6 +30,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 /*
+  Admin only routes. Will soon add role-based permissions.
+*/
+
+/*
 app.post("/api/song/add", 
   (req, res)=>{
     Song.create(req.body, (err, data)=>{
