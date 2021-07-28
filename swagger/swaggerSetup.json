@@ -5,7 +5,7 @@
     "title": "M-And-M API",
     "contact": {
       "name": "Satyabrat Panda",
-      "Email": "satyabratp.m.2000@gmail.com"
+      "email": "satyabratp.m.2000@gmail.com"
     },
     "servers": ["http://localhost:8000/", "https://rpi4me.duckdns.org/eminem/"]
   },
