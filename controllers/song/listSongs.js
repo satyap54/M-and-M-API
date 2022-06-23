@@ -10,10 +10,6 @@ const redisClient = require('../redis/redis');
 */
 
 const listSongs = (req, res, next)=>{
-  if(req.ipLimit){
-    return res.status(429).send("Request Limit Exceeded !");
-  }
-  
   // If no query parameters are supplied, first ten songs are displayed
   let page = 1, size = 10;
   if(req.query.page)

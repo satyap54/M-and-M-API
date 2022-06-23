@@ -10,10 +10,6 @@ const redisClient = require('../redis/redis');
 */
 
 const getQuoteById = (req, res)=>{
-  if(req.ipLimit){
-    return res.status(429).send("Request Limit Exceeded !");
-  }
-
   const { quote_id } = req.params; 
   redisClient.get(`quote${quote_id}`, async (err, quote)=>{
     if(err){

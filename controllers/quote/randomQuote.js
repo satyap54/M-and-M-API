@@ -7,9 +7,6 @@ const Quote = require('../../models/Quote');
   The song details is of the format: 6. Not Afraid
 */
 const randomQuote = async (req, res)=>{
-  if(req.ipLimit){
-    return res.status(429).send("Request Limit Exceeded !");
-  }
   try{
     const [result] = await Quote.aggregate([
       { $sample: { size: 1 } }

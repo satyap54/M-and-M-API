@@ -45,7 +45,7 @@ const rateLimiter = (req, res, next)=>{
         const totalHits = (1.0 - elapsedFraction) * prevCount + currCount;
         //console.log(prevCount, currCount, totalHits, MAX_WINDOW_REQUEST_COUNT);
         if(totalHits > parseInt(MAX_WINDOW_REQUEST_COUNT)){
-          req.ipLimit = "true";
+          return res.status(429).send("Request Limit Exceeded");
         }else{
           redisClient.incr(currKey);
         }

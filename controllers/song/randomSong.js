@@ -11,9 +11,6 @@ const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
       enum = ["B-Rabbit", "SlimShady", "Eminem", "MarshallMathers"]
 */
 const randomSong = async (req, res)=>{
-  if(req.ipLimit){
-    return res.status(429).send("Request Limit Exceeded !");
-  }
   try{
     const filter = {};
     if(req.query.persona){

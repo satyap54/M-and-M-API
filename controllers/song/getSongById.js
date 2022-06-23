@@ -10,9 +10,6 @@ const redisClient = require("../redis/redis");
 */
 
 const getSongById = (req, res, next)=>{
-  if(req.ipLimit){
-    return res.status(429).send("Request Limit Exceeded !");
-  }
   const { song_id } = req.params;
   redisClient.get(`song${song_id}`, async (err, data)=>{
     if(err){
